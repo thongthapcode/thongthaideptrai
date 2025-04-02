@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  @apply bg-gray-100 font-sans;
+}
+
+header {
+  @apply bg-yellow-400 p-2 fixed top-0 left-0 w-full z-50;
+}
+
+header .logo img {
+  @apply h-12;
+}
+
+header input {
+  @apply w-full h-10 pl-12 pr-4 rounded-full outline-none text-base;
+}
+
+header nav button {
+  @apply text-sm flex items-center gap-2 cursor-pointer;
+}
+
+header nav .cart-badge {
+  @apply absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-sm hidden;
+}
+
+#sliderContainer {
+  @apply flex w-full h-[120px] sm:h-[180px] md:h-[200px] lg:h-[190px] transition-transform duration-700 ease-in-out;
+}
+
+#sliderContainer img {
+  @apply w-full flex-shrink-0 object-cover h-full rounded-lg;
+}
+
+#login-modal {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden;
+}
+
+#login-modal .modal-content {
+  @apply bg-white p-6 rounded-lg w-full max-w-sm;
+}
+
+#login-modal .modal-content h2 {
+  @apply text-2xl font-bold mb-4 text-center;
+}
+
+#login-modal .modal-content form {
+  @apply space-y-4;
+}
+
+#login-modal .modal-content form input {
+  @apply w-full p-2 border rounded;
+}
+
+#login-modal .modal-content form button {
+  @apply w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600;
+}
+
+#login-message {
+  @apply mt-4 text-center text-red-500;
+}
+
+#close-login {
+  @apply mt-4 w-full bg-gray-300 text-black py-2 rounded hover:bg-gray-400;
+}
